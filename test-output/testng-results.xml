@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-24T07:59:43Z" name="Suite" finished-at="2024-06-24T07:59:59Z" duration-ms="15861">
+    <groups>
+    </groups>
+    <test started-at="2024-06-24T07:59:43Z" name="Test" finished-at="2024-06-24T07:59:59Z" duration-ms="15861">
+      <class name="demoPOCTestCases.RegisterMemberLoginAndUpdate">
+        <test-method signature="TC_01ValidateTheUserEnterAllMandatoryField(payload.UserRegistrationRequest)[pri:0, instance:demoPOCTestCases.RegisterMemberLoginAndUpdate@7890324e]" started-at="2024-06-24T07:59:43Z" name="TC_01ValidateTheUserEnterAllMandatoryField" data-provider="memberRegistrationData" finished-at="2024-06-24T07:59:57Z" duration-ms="13529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[payload.UserRegistrationRequest@6b438782]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01ValidateTheUserEnterAllMandatoryField -->
+        <test-method signature="TC_02ValidateTheUserLoginWithValidCreds(payload.LoginPayload)[pri:0, instance:demoPOCTestCases.RegisterMemberLoginAndUpdate@7890324e]" started-at="2024-06-24T07:59:57Z" name="TC_02ValidateTheUserLoginWithValidCreds" data-provider="loginData" finished-at="2024-06-24T07:59:58Z" duration-ms="739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[payload.LoginPayload@7bffa618]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02ValidateTheUserLoginWithValidCreds -->
+        <test-method signature="TC_03ValidateTheUserUpdateTheCreads(payload.UpdateMemberPayload)[pri:0, instance:demoPOCTestCases.RegisterMemberLoginAndUpdate@7890324e]" started-at="2024-06-24T07:59:58Z" name="TC_03ValidateTheUserUpdateTheCreads" data-provider="updateMember" finished-at="2024-06-24T07:59:59Z" duration-ms="675" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[payload.UpdateMemberPayload@ff46c9f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03ValidateTheUserUpdateTheCreads -->
+      </class> <!-- demoPOCTestCases.RegisterMemberLoginAndUpdate -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

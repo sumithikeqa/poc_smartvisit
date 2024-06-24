@@ -1,0 +1,26 @@
+Response code----------------->>>>
+ {
+    "responseDateTime": "24-06-2024 18:00:17",
+    "requestStatus": {
+        "status": "SUCCESS"
+    },
+    "profileMembership": {
+        "programId": 22181,
+        "memberId": "R04004328",
+        "membershipLevel": 0,
+        "joinedDate": "25-04-2024 10:20:00",
+        "brandPreference": 9999
+    },
+    "profilePerson": {
+        "givenName": "Sample",
+        "familyName": "Member",
+        "emailAddress": "invalid-emaformat",
+        "postCode": "3255",
+        "country": "AU",
+        "memberPin": "6987",
+        "gender": "3"
+    },
+    "profileProduct": [
+        
+    ]
+}
