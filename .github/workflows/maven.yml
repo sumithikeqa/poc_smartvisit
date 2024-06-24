@@ -1,0 +1,45 @@
+name: Run TestNG Tests
+
+on:
+  schedule:
+    - cron: '0 0 */7 * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 19
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '19'
+
+    - name: Install Maven
+      run: mvn --version
+
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/RestApiFramework/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
+
+    - name: Build with Maven
+      run: mvn install -DskipTests
+      working-directory: RestApiFramework
+
+    - name: Run Tests
+      run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
+      working-directory: RestApiFramework
+
+    - name: Upload Extent Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Extent Report
+        path: RestApiFramework/extentReport.html
