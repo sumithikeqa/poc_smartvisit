@@ -32,11 +32,11 @@ jobs:
 
     - name: Build with Maven
       run: mvn install -DskipTests
-      working-directory: poc_smartvisit
+      
 
     - name: Run Tests
       run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
-      working-directory: poc_smartvisit
+    
 
     - name: Upload Extent Report
       uses: actions/upload-artifact@v2
